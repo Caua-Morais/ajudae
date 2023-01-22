@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Inter', sans-serif, 'Segoe UI', Tahoma, Verdana;
+}
+
+:root{
+    --lilas-1: #782192;
+    --lilas-2: #7408B8;
+    --rosa-1: #E51285;
+    --rosa-2: #F63DA2;
+    --rosa-5: #FFBADF;
+    --gradient-1: linear-gradient(90deg, rgba(116,8,184,1) 0%, rgba(231,21,135,1) 100%);
+}
+
+
+/*Estilos próprios*/
+.container{
+    padding-left: 8em;
+    padding-right: 8em;
+}
+
+.bg-gradient-purple{
+    background: var(--gradient-1);
+}
+
+.text-pink{
+    color: var(--rosa-1);
+}
+
+.text-purple{
+    color: var(--lilas-1);
+}
+
+.link {
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+}
+
+.link:hover{
+    color: var(--lilas-1);
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--rosa-2);
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+}
+
+.link--metis::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.link--metis:hover::before {
+    color: #F63DA2;
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+/*Navbar home*/
+.btn-nav-home{
+    border-radius: 10px;
+}
+
+/*First container*/
+.gradient-container{
+    background-image: url('/static/img/home-vector3.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+/*About container*/
+.about-container h1{
+    position: relative;
+}
+
+.about-container h1::after{
+    content: "";
+    width: 8rem;
+    height: .25rem;
+    background-color: var(--rosa-2);
+    display: block;
+    position: absolute;
+}
+
+.about-container p{
+    font-size: 1.25em;
+}
+
+/*Map container*/
+.map-container h1::after{
+    content: "";
+    width: 5rem;
+    height: .25rem;
+    background-color: var(--rosa-5);
+    display: block;
+    position: absolute;
+}
+
+#search-map{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+#search-map::-webkit-input-placeholder {
+    color: var(--lilas-1);
+    padding-left: 2.5em;
+}
+
+.search-map-button{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/*Us container*/
+.us-title::after{
+    content: "";
+    width: 8rem;
+    height: .25rem;
+    background-color: var(--rosa-2);
+    display: block;
+    position: absolute;
+}
+
+/*Footer*/
+.footer-links a{
+    font-size: 2.5em;
+}
+
+.profile figure img{
+    background-color: var(--lilas-2);
+    border: 3px var(--lilas-2) solid;
+    border-radius: 50%;
+}

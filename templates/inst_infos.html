@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block title %}
+  login
+{% endblock %}
+
+{% block content %}
+<section class="container mt-3">
+  <div class="card user-card border-0">
+    <h1 class="card-user-title text-white">Perfil do usuário</h1>
+
+    <div class="user-info row mt-5">
+      <div class="data col-6">
+        <label class="text-white form-label w-100 mb-0" for="name">Nome da instituição</label>
+        <input class="text-light border-0 bg-transparent w-100" type="text" name="name" value="{{institution.name}}" readonly>
+        <label class="text-white form-label w-100 mt-4" for="contact">Número</label>
+        <input class="text-light border-0 bg-transparent w-100" type="text" name="contact" value="{{institution.contact}}" readonly>
+        <label class="text-white form-label w-100 mt-4 mb-0" for="name">E-mail</label>
+        <input class="text-light border-0 bg-transparent w-100" type="email" value="{{institution.email}}" readonly>
+        <label class="text-white form-label w-100 mt-4 mb-0" for="name">Senha</label>
+        <input class="text-light border-0 bg-transparent w-100" type="password" value="{{institution.password}}" readonly>
+      </div>
+      
+      <figure class="col-6 text-center">
+        <img src="{{ url_for('static', filename='img/user-mockup.svg') }}">
+      </figure>
+      
+    </div>
+    <form class="mt-5">
+      <button type="submit" class="btn btn-success border-0 edit-user-button px-3" >Editar</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

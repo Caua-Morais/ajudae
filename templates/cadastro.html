@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block title %}
+  Cadastro
+{% endblock %}
+{% block content %}
+<section class="container mt-3">
+  <div class="card border-0">
+    <div class="cad-form-container">
+      <h1 class="text-white">Crie sua conta</h1>
+      <form class="cad-form" action="#" method="POST">
+        <div class="form-group">
+          <label class="form-label text-white" for="name">Nome</label>
+          <input class="form-control" type="text" name="name" placeholder="Digite seu nome" required>
+          <label class="form-label text-white" for="email">E-mail</label>
+          <input class="form-control" type="email" name="email" placeholder="Digite seu e-mail" required>
+          <label class="form-label text-white" for="pass">Crie sua senha</label>
+          <input class="form-control" type="password" name="pass" placeholder="Digite sua senha" required>
+        </div>
+        
+        <input type="submit" class="btn btn-success text-white sbmt-cad-button py-2" value="Criar conta">
+        <a href="/instituicao-cad" class="text-decoration-none btn btn-success text-white sbmt-cad-button ms-3">
+          Cadastrar instituição
+        </a>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 body{
-    font-family: 'Inter', sans-serif, 'Segoe UI', Tahoma, Verdana;
+    font-family: 'Montserrat', sans-serif, 'Segoe UI', Tahoma, Verdana;
 }
 
 :root{
@@ -10,11 +11,28 @@ body{
     --rosa-1: #E51285;
     --rosa-2: #F63DA2;
     --rosa-5: #FFBADF;
-    --gradient-1: linear-gradient(90deg, rgba(116,8,184,1) 0%, rgba(231,21,135,1) 100%);
+    --verde-1: #64CDA8 ;
+    --gradient-1: linear-gradient(90deg, rgba(116,8,184,1) 0%, rgba(231,21,135,1) 100%); 
 }
 
 
 /*Estilos próprios*/
+.btn-success{
+  background-color: var(--verde-1) !important;  
+}
+
+.text-light{
+  color: #D9D9D9;
+}
+
+.text-success{
+  color: var(--verde-1) !important;  
+}
+
+.alternative-font{
+  font-family: 'Inter', sans-serif;
+}
+
 .container{
     padding-left: 8em;
     padding-right: 8em;
@@ -79,6 +97,7 @@ body{
     background-image: url('/static/img/home-vector3.svg');
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: contain;
 }
 
 /*About container*/
@@ -132,6 +151,113 @@ body{
     background-color: var(--rosa-2);
     display: block;
     position: absolute;
+}
+
+/*Cadstro && Login*/
+.cad-form-container,
+.login-form-container,
+.cad-inst-form-container{
+  padding-left: 4.3125rem;
+  background-image: url('/static/img/login-layout.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.cad-form-container::before,
+.login-form-container::before,
+.cad-inst-form-container::before{
+  content: '';
+  display: block;
+  background-image: url('/static/img/logo-login.svg');
+  background-repeat: no-repeat;
+  width: 24rem;
+  height: 6.6rem;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 6rem);
+}
+
+.cad-form-container h1,
+.login-form-container h1,
+.cad-inst-form-container h1{
+  margin-top: 5.6rem;
+}
+
+.cad-form,
+.login-form{
+  margin-top: 2.4rem;
+}
+
+.cad-form .form-group .form-control{
+  margin-bottom: 1.6rem;
+  border-radius: 30px;
+  max-width: 20.25rem;
+  border: 0;
+}
+
+.login-form .form-control{
+  margin-bottom: 1.6rem;
+  border-radius: 30px;
+  max-width: 20.25rem;
+  border: 0;
+}
+
+.cad-inst-form .form-control{
+  border-radius: 30px;
+  max-width: 20.25rem;
+  border: 0;
+}
+
+.cad-form .form-control::-webkit-input-placeholder,
+.login-form .form-control::-webkit-input-placeholder
+.cad-inst-form .form-control::-webkit-input-placeholder{
+  color: #D9D9D9;
+}
+
+#manterse-check:checked{
+  background-color: var(--verde-1) !important;
+}
+
+.cad-link{
+  margin-bottom: 5rem
+}
+
+.sbmt-cad-button{
+  border-radius: 30px;
+  border: 0;
+  margin-bottom: 8.25rem;-
+}
+
+.sbmt-login-button{
+  border-radius: 30px;
+  border: 0;
+}
+
+.sbmt-cad-inst-button{
+  border-radius: 30px;
+  border: 0;
+}
+
+/*User*/
+.user-card{
+  background-image: var(--gradient-1);
+  padding: 5rem 7.6rem;
+  border-radius: 28px;
+}
+
+.user-card h1{
+  font-size: 50px;
+}
+
+.user-card input,
+.user-card label{
+  font-size: 20px;
+}
+
+.edit-user-button{
+  border-radius: 26px;
 }
 
 /*Footer*/

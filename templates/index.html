@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
+    <title>Ajudaê | {% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <header class="shadow-sm py-3">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand" href="/">
+                    <figure class="m-0">
+                        <img src="{{url_for('static', filename='img/logo.svg')}}" alt="logo">
+                    </figure>
+                </a>
+
+                <div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li>
+                            <a class="text-decoration-none mx-3 link link--metis text-purple alternative-font" href="/">Início</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none mx-3 link link--metis text-purple alternative-font" href="#">Sobre</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none mx-3 link link--metis text-purple alternative-font" href="#">Mapa</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <a class="text-decoration-none text-purple link link--metis mx-3" href="/login">Entrar</a>
+                    <a href="/cadastro" class="text-decoration-none btn-nav-home bg-gradient-purple mx-3"><button
+                            class="btn text-white alternative-font px-4">Inscreva-se</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

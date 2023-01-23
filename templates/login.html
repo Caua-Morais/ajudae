@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% block title %}
+  login
+{% endblock %}
+{% block content %}
+<section class="container mt-3">
+  <div class="card border-0">
+    <div class="login-form-container">
+      <h1 class="text-white">Faça seu login</h1>
+      <form class="login-form" action="#" method="POST">
+        <div class="form-group mb-3">
+          <label class="form-label text-white" for="email">E-mail</label>
+          <input class="form-control" type="email" name="email" placeholder="Digite seu e-mail">
+          <label class="form-label text-white" for="pass">Senha</label>
+          <input class="form-control mb-0" type="password" name="pass" placeholder="Digite sua senha">
+          <div class="form-check mt-3"> 
+            <input class="form-check-input rounded-0 border-0" type="checkbox" value="1" id="manterse-check">
+            <label class="form-check-label text-white" for="manterse-check">
+              Lembre-se de mim
+            </label>
+          </div>
+        </div>
+        
+        <input type="submit" class="btn btn-success text-white sbmt-login-button py-2 px-5 mt-3" value="Entrar">
+        <div class="mt-5 cad-link">
+          <span class="text-white">
+            Ainda não é inscrito? 
+            <a href="/cadastro" class="text-success text-decoration-none">
+              Inscreva-se aqui
+            </a>
+          </span>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

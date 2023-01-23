@@ -1,0 +1,121 @@
+{% extends 'index.html' %}
+{% block title%}
+  Home
+{% endblock %}
+
+{% block content %}
+<section class="container-fluid gradient-container px-0 m-0 vh-100">
+        <div class="container mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <div>
+                    <h1 class="text-purple fw-normal">O nosso plano é <br><span class="fw-bold">levar ajuda a quem<br>
+                            demais precisa</span></h1>
+                    <button class="btn text-white bg-gradient-purple d-flex align-items-center border-0 mt-5">Faça sua
+                        doação <figure class="mb-0 mx-2"><img src="/static/img/arrow-btn.svg" alt="seta direita">
+                        </figure></button>
+                </div>
+                <figure><img src="static/img/home-vector.svg" src="Iluistração da tela inicial"></figure>
+            </div>
+        </div>
+    </section>
+    <section class="container about-container vh-100">
+        <div class="row my-5">
+            <div class="col-6">
+                <h1 class="fw-bold text-purple mt-5">Sobre nós</h1>
+                <p class="mt-5">Projeto feito com o objetivo de ajudar insituições de caridade, tendo como meta a divulgação dessas organizações para atingir o maior número de pessoas e doações possíveis, facilitando o encontro do usuário com o local que ele deseja, para assim ajudar a comunidade como um todo e inspirar este sentimento de caridade, aultrismo e bondade.
+                </p>
+            </div>
+            <div class="col-6">
+                <figure class="mb-0 mt-5">
+                    <img src="static/img/about-ilust.svg">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid p-0 m-0 bg-gradient-purple vh-100">
+        <div class="container map-container py-5">
+            <h1 class="fw-bold text-white mt-5">Mapa</h1>
+            <div class="map mt-5 row">
+                <div class="row col-md-6 no-gutters align-items-center mb-4">
+                    <div class="col-lg-8 col-md-6 col-sm-12 p-0 search-map-input">
+                        <input type="text" placeholder="Pesquise a instituição" class="form-control border-0 bg-light" id="search-map" name="search">
+                    </div>
+                    <div class="col-lg-1 col-md-3 col-sm-12 p-0 ms-1"> 
+                        <button class="btn btn-base bg-light py-1 search-map-button">
+                            <i class="ri-search-line text-purple fw-bold"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-8 text-center rounded" id="map">
+                  {{mapc | safe}}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container us-container">
+        <div class="py-5">
+            <h1 class="fw-bold text-purple mt-5 us-title">Quem somos?</h1>
+            <div class="us py-4">
+                <div class="row mt-5">
+                    <div class="profile col-4 text-center">
+                        <figure>
+                            <img src="static/img/caua.png">
+                        </figure>
+                        <h3 class="fw-bold text-purple">
+                            Cauã 
+                            <br><span class="fw-normal">Morais</span>
+                        </h3>
+                    </div>
+                    <div class="profile col-4 text-center ">
+                        <figure>
+                            <img src="static/img/gabriel.png">
+                        </figure>
+                        <h3 class="fw-bold text-purple">
+                            Gabriel 
+                            <br><span class="fw-normal">Henrique</span>
+                        </h3>
+                    </div>
+                    <div class="profile col-4 text-center">
+                        <figure>
+                            <img src="static/img/jose.png">
+                        </figure>
+                        <h3 class="fw-bold text-purple">
+                            José 
+                            <br><span class="fw-normal">Allan</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="profile text-center">
+                        <figure>
+                            <img src="static/img/baesse.png">
+                        </figure>
+                        <h3 class="fw-bold text-purple">
+                            Pedro 
+                            <br><span class="fw-normal">Baesse</span>
+                        </h3>
+                        <small class="text-pink">(Orientador)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <footer class="container-fluid p-0 m-0 bg-gradient-purple">
+        <div class="container py-5">
+            <p class="text-white text-center">Acompanhe nosso progresso e saiba mais sobre este projeto, nos siga nas nossas redes sociais.</p>
+            <div class="row footer-links d-flex justify-content-center align-items-center text-center mt-4 px-5">
+                <a href="#" class="text-decoration-none col-1 text-white">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="#" class="text-decoration-none col-1 text-white">
+                    <i class="ri-facebook-line"></i>
+                </a>
+                <a href="#" class="text-decoration-none col-1 text-white">
+                    <i class="ri-twitter-line"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
